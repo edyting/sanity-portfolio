@@ -7,6 +7,7 @@ import About from './pages/About';
 import Error from './pages/Error';
 import Singlepost from './pages/Singlepost';
 import Project from './component/Project';
+import Post from './pages/Post';
 
 
 const router= createBrowserRouter([
@@ -16,7 +17,12 @@ const router= createBrowserRouter([
     errorElement:<Error/>,
     children:[
       {index:true,element:<Home/>},
-      {path:"/about",element:<About/>}
+      {path:"/about",element:<About/>},
+      {path:"/post",element:<Post/>},
+      {path:"/post/:slug",element:<Singlepost/>},
+      {path:"/project",element:<Project/>},
+     
+
     ]
   }
 ])
