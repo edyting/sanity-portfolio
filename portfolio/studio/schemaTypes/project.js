@@ -1,31 +1,29 @@
 import {defineField, defineType} from 'sanity'
 
-export default defineType ({
+export default{
     name:"project",
     title:"Project",
     type:"document",
     fields:[
-        defineField(
+       
         {
             name:"title",
             type:"string",  
-        }),
-        defineField(
+        },
+        
         {
             name:"date",
             type:"datetime",
-        }),
-        defineField(
+        },
+        
         {
             name:"place",
             type:"string"
-        }),
-        defineField(
+        },
         {
             name:"description",
             type:"text"
-        }),
-        defineField(
+        },
         {
             name:"projectType",
             title:"Project type",
@@ -37,13 +35,11 @@ export default defineType ({
                    {value:"school",title:"school"}
                 ]
             }
-        }),
-        defineField(
+        },
         {
             name:"link",
             type:"url"
-        }),
-        defineField(
+        },
         {
             name:"tags",
             type:"array",
@@ -53,6 +49,6 @@ export default defineType ({
             options:{
                 layout:"tags"
             }
-        })
+        }
     ]
-})
+}

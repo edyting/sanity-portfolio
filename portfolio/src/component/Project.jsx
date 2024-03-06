@@ -8,7 +8,7 @@ function Project() {
 const [projectData,setProjectData]= useState(null);
 
 useEffect(()=>{
-  sanityClient.fetch(` *[_type == project]{
+  sanityClient.fetch(`*[_type == "project"]{
     title,
     date,
     place,
@@ -16,7 +16,8 @@ useEffect(()=>{
     project,
     link,
     tags
-  }`).then((data)=>setProjectData(data))
+  }`)
+  .then((data)=>setProjectData(data))
   .catch(console.error);
 },[])
 
